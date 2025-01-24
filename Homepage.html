@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            font-size: 18px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: #ff6347;
+        }
+        section {
+            display: none;
+            padding: 50px 20px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100vh;
+            opacity: 0;
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+        .active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        .cta-buttons {
+            margin-top: 20px;
+        }
+        .cta-buttons a {
+            background-color: #ff6347;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .cta-buttons a:hover {
+            background-color: #d9534f;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+        /* Login Form Styling */
+        .login-form {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: 0 auto;
+            color: #000;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #d9534f;
+        }
+        .trainer-card {
+            display: inline-block;
+            text-align: left;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 300px;
+            color: black;
+        }
+        .trainer-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .trainer-card h3 {
+            margin: 10px 0 5px;
+            font-size: 20px;
+        }
+        .trainer-card p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>ELITE FITNESS HOME</h1>
+        <nav>
+            <a id="home-link">Home</a>
+            <a id="about-link">About</a>
+            <a id="services-link">Services</a>
+            <a id="contact-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="active" style="background-image: url(https://lh3.googleusercontent.com/p/AF1QipMXBrDb9PYUJdgzuAeP3_pkA72pNoLF9YjER_Si=s2560-w2560-h1196-rw);">
+        <div class="hero">
+            <h1>Transform Your Body, Transform Your Life</h1>
+            <div class="cta-buttons">
+                <a href="#" id="learn-more">Learn More</a>
+                <a href="#" id="join-now">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="background-image: url(https://lh3.googleusercontent.com/p/AF1QipPFyOvMuR6MAqPhWQA2JMi8Fydo0ub-ThG2kd4P=s2560-w2560-h1196-rw);">
+        <h2>About Our Gym</h2>
+        <p>We provide personalized training programs and wellness solutions to help you achieve your fitness goals.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="background-image: url(https://lh3.googleusercontent.com/p/AF1QipM3Gz9Wx3n-8osDgyXwb8W4CqFsvwIgo9tE3DRq=s2560-w2560-h1196-rw);">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Personal Training</li>
+            <li>Group Classes</li>
+            <li>Nutrition and Wellness Guidance</li>
+        </ul>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" style="background-image: url(https://lh3.googleusercontent.com/p/AF1QipP6AxOYDYfPc2M-IMCJ2t7qpm0gjc2CUSr4KXve=s2560-w2560-h1196-rw);">
+        <div class="login-form">
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Enter your username" required>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-image: url(https://lh3.googleusercontent.com/p/AF1QipNy-_MVVplPr1qUtTuR_py-NOF7HqMUqeWdp3MJ=s2560-w2560-h1196-rw);">
+        <h2>Meet Our Trainers</h2>
+        <div class="trainer-card">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOiujKYV5PhIg3i0tl6r5nJt1gqA7YL_UL9X-M0=s2560-w2560-h1196-rw" alt="Trainer 1">
+            <h3>Raf Otieno</h3>
+            <p>Email: otienoraf6@gmail.com</p>
+            <p>Phone: +254 7456 78929</p>
+        </div>
+        <div class="trainer-card">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPcFjCNIYI5l2yBMAz3F2VtvTM7kLwIMz5KLHci=s2560-w2560-h1196-rw" alt="Trainer 2">
+            <h3>Skish Kamau</h3>
+            <p>Email: skiahkamau73@gmail.com</p>
+            <p>Phone: +254 7654 32126</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ELITE FITNESS HOME</p>
+        <div>
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/peterz_sailor040/" target="_blank">Instagram</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        const learnMoreButton = document.getElementById('learn-more');
+        const joinNowButton = document.getElementById('join-now');
+
+        // Navigation
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                sections.forEach(section => section.classList.remove('active'));
+                const targetSection = document.getElementById(link.id.replace('-link', ''));
+                targetSection.classList.add('active');
+            });
+        });
+
+        // Link buttons
+        learnMoreButton.addEventListener('click', () => {
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById('about').classList.add('active');
+        });
+
+        joinNowButton.addEventListener('click', () => {
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById('login').classList.add('active');
+        });
+    </script>
+
+</body>
+</html>
