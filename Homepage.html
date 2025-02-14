@@ -220,26 +220,10 @@
 
     <!-- JavaScript -->
     <script>
-       document.getElementById("login-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const email = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    const response = await fetch("http://127.0.0.1:8000/login/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password })
-    });
-
-    const data = await response.json();
-    if (response.ok) {
-        alert("Login successful!");
-    } else {
-        alert("Login failed: " + data.message);
-    }
-});
-
-
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        const learnMoreButton = document.getElementById('learn-more');
+        const joinNowButton = document.getElementById('join-now');
         // Navigation
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
